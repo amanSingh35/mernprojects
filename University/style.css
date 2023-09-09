@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Front Page of the website */
+.header {
+    min-height: 100vh;
+    /* min-height or max-height, min-width, max-height are properties to set min and max value of something. 
+    If min height is 100px then if we decrease content then it will keep decreasing till 100px 
+    and if max-hight is given then then if we increase the contents then the hight will keep increasing till 500px and then the 
+    the contents will overflow. */
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.4), rgba(4, 9, 30, 0.4)), url(images/banner.png);
+    /* this will give two things to the background on top will be a transparent curtain 
+    of gradient. and then a background image. */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    /* block takes whole space or line. Inline takes only required space.and we cant change the height or length in both
+    but inline-block takes required space first but we can change the height or width  */
+    flex-direction: row;
+    padding: 8px 12px;
+    position: relative;
+
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: brown;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    color: white;
+}
+
+.button {
+    border: 2px solid rgb(37, 168, 208);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: aquamarine;
+    cursor: pointer;
+
+}
+
+.button:hover {
+    border: 1px solid plum;
+    background: plum;
+    transition: 1s;
+
+}
+
+.header .nav-links .fa-solid{
+    display:none;
+}
+.header nav .fa-solid{
+    display:none;
+}
+.sub-header .nav-links .fa-solid{
+    display:none;
+}
+.sub-header nav .fa-solid{
+    display:none;
+}
+
+
+
+
+/* Responsive Part */
+
+@media(max-width:700px) {
+
+    .text-box h1 {
+        font-size: 25px;
+    }
+
+    .text-box p {
+        margin: 10px 25px 25px;
+        color: white;
+        font-size: 10px;
+    }
+
+    .button {
+        border: 2px solid white;
+        font-size: 15px;
+        font-family: 'Anton', sans-serif;
+        border-radius: 3px;
+        padding: 5px 10px;
+        color: aquamarine;
+        cursor: pointer;
+
+    }
+
+    nav img {
+        width: 100px;
+
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 15px;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 1;
+        transition: 1s;
+    }
+
+    .fa-solid {
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+}
+
+
+
+/* COURSES PART */
+.courses {
+    width: 80%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0 0;
+}
+
+h1 {
+    font-size: 36px;
+
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    margin: 2%;
+    justify-content: space-between;
+
+}
+
+.course-col {
+    flex-basis: 30%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    /* The box-sizing property allows us to include the padding and border in an element's total width and height.
+
+    If you set box-sizing: border-box; on an element, padding and border are included in the width and height */
+}
+
+h3{
+    text-align:center;
+    font-weight:600;
+    margin:10px 0;
+}
+
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Part */
+
+@media(max-width:700px){
+    .row {
+        display: block;
+        margin: 5%;
+        /* justify-content: space-between;  this property does not have 
+        any effect in display:block as block already takes all the space */
+    
+    }
+
+   .row h3{
+        text-align:center;
+        font-size:18px;
+        margin:10px 0;
+    }
+    .courses h1{
+        font-size:25px;
+    }
+    .courses {
+        width: 90%;
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding: 50px 0 0;
+    }
+
+    .courses p {
+        color: #777;
+        font-size: 13px;
+        padding: 10px;
+    }
+    .rows p{
+        font-size:13px;
+    }
+    
+}
+
+/* Campuses part */
+
+.campus{
+    margin:auto;
+    text-align:center;
+    padding:50px 0 0 0;
+    width:80%;
+}
+
+/* .campus-col{ 
+    height:600px;
+    position:absolute;  i dont know how but after giving position things got correct
+}
+.campus-col img{ 
+    height:600px;
+} */
+ .campus-col{
+    flex-basis:32%;/*sets the width of the flex items coming */
+    border-radius: 10px;
+    margin-bottom:30px;
+    position:relative;
+    overflow:hidden;/* if contents overflow the div then this property is used
+                       values are: scroll,hidden,auto,clip,visible */
+}
+ .campus-col img{
+       width:100%;
+       height:100%;
+} 
+
+.layer{
+    background:transparent;
+    opacity:0.5;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    transition:0.5s;
+}
+.layer:hover{
+    background:#dc0f0f;
+
+}
+
+.layer h3{
+    position:absolute;
+    font-size: 25px;
+    bottom:0;
+    left:37%;
+    color:black;
+    opacity:0;
+    transition: all 0.5s ease-in-out;
+    
+}
+.layer:hover h3{
+    opacity:1;
+    transform:translateX(-50%);
+    bottom:49%;
+    left:50%;
+   
+}
+
+
+/* Facilities Part */
+
+.facilities{
+    /* text align is used to align the text of a div to center,left or right
+    while align-items is used to align the items of flexbox */
+    width:80%;
+    text-align:center;
+    padding:50px 0 0 0;
+    margin:auto;
+
+}
+
+.facilities-col{
+flex-basis:31%;
+border-radius:10px;
+margin-bottom:5%;
+
+}
+.facilities-col img{
+    width:100%;
+    border-radius:10px;
+}
+.facilities-col h3{
+    text-align:left;
+    margin:0;
+}
+.facilities-col p{
+    text-align:left;
+    padding:0 0 15px;
+}
+
+/* CSS for Testimonials Part */
+
+.testimonials{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top: 50px;
+}
+.testimonial-col{
+    flex-basis:42%;/* we dont have to think about the height */
+    border-radius:10px;
+    margin-bottom:5%;
+    text-align:left;
+    background: #fff3f3;
+    padding:25px;
+    cursor:pointer;
+    display:flex;
+}
+.testimonial-col img{
+    height:40px;
+    margin-left:5px;
+    margin-right:30px;
+    border-radius:50%;
+    
+}
+.testimonial-col h3{
+    text-align: left;
+    margin:0;
+}
+.testimonial-col p{
+    padding:0;
+}
+
+.cta{
+    margin:100px auto;
+    width:80%;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/banner2.jpg);
+    background-position:center;
+    background-size:cover;
+    border-radius:10px;
+    text-align:center;
+    padding:100px 0;
+
+}
+.cta h1{
+    margin:50px;
+    color:white;
+    padding:0;
+
+}
+@media(max-width:700px){
+   .cta h1{
+    font-size:24px;
+   }
+}
+
+/* Footer Section */
+.footer{
+    width:60%;
+    text-align:center;
+    padding:0px 0 50px 0;
+    margin:auto;
+   
+}
+
+.icons .fa-brands{
+    margin:0 13px;
+    cursor:pointer;
+    padding:18px 0;
+}
+
+/* -------About Us Page-------- */
+.sub-header{
+    height:50vh;
+    width:100%;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/background.jpg);
+    background-position:center;
+    background-size:cover;
+    text-align:center;
+    
+}
+.sub-header h1{
+    padding-top:100px;
+    color:white;
+}
+.about-us{
+    width:80%;
+    margin:auto;
+    padding-top:80px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis:48%;
+}
+.about-col img{
+    width:100%;
+    border-radius:5px;
+}
+.about-col h1{
+    padding:10px;
+}
+
+/* Blog Css */
+
+
+.blog-content{
+    width:80%;
+    margin:auto;
+    padding:60px 0;
+}
+.blog-left{
+    flex-basis:65%;
+}
+.blog-content img{
+    width:100%;
+}
+.blog-left p{
+    padding:5px;
+    color:black;
+}
+.blog-right{
+    flex-basis:32%;
+}
+
+.blog-right h3{
+    background:#f44336;
+    color:#fff;
+    padding:7px 0;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.blog-right div{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    color:#555;
+    padding:8px;
+    box-sizing:border-box;/* this attribute has two values : content-box
+    and border-box. In first padding margin will add extraa while in border-box that will 
+    be included within the box size */
+}
+
+.comment-box{
+    border:1px solid #ccc;
+    margin:50px 0;
+    padding:10px 20px;
+   
+}
+.comment-box h3{
+    text-align:left;
+}
+.comment-form input, .comment-form textarea{
+    width:100%;
+    padding:10px;
+    margin:15px 0;
+    box-sizing:border-box;
+    border:none;
+    outline:none;
+    background:#f0f0f0;
+}
+.comment-form button{
+    padding:10px;
+    font-size:10px;
+    color:#ccc
+}
+
+/* location */
+.location{
+    width:80%;
+    margin:auto;
+    padding:80px 0;
+    border-radius:10px;
+
+}
+.location iframe{
+    width:100%;
+    border-radius:10px;
+}
+
+.contact-us{
+    width:80%;
+    margin:auto;
+}
+.contac-col{
+
+    flex-basis:48%;
+    margin-bottom:30px ;
+
+}
+.contact-col div{
+    display:flex;
+    align-items:center;
+    margin-bottom:40px;
+}
+.contact-col div .fa-solid{
+    font-size:28px;
+    color:#f44336;
+    margin:10px;
+    margin-right: 30px;
+}
+.contact-col div h5{
+    font-size:20px;
+    margin-bottom:5px;
+    color:#555;
+    font-weight: 400;
+}
+.contact-col input, .contact-col textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom: 10px;
+    outline:none;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+}
