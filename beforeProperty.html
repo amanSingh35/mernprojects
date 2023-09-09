@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beforePseudoSelector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <style>
+         .list{
+            display:flex;
+            list-style: none;
+            padding:0px;
+            
+        
+         }
+         .item{
+            font-family: 'Oswald', sans-serif;
+            padding:20px 10px;
+            font-size:18px;
+            
+         }
+         body{
+            background-color: black;
+            color: white;/* color property is used to give color to the text */
+            margin:0px;
+            padding:0px;
+           /* background-image: url("background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;*//* use these three properties together to add image */
+
+         }
+         section{
+            font-family: 'Caveat', cursive;
+            height:350px;
+            justify-content: center;
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            padding:0px;
+            margin:0px 350px;
+           
+         }
+        header::before{
+            background-image: url("background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            content:"";
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            z-index:-1;
+            opacity:.7;
+
+        }
+         h3{
+            font-size:4rem;
+         }
+         p{
+            text-align: center;
+         }
+         /* margin-inline-end and start| margin-block-end and start both give
+         margin at start and end of any element. And second one give at top and bottom; */
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="list">
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h3>Welcome to Coding World</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ut doloremque
+        consectetur doloribus quibusdam alias eum, recusandae ratione, animi suscipit 
+        fugit ipsum !</p>
+    </section>
+</body>
+</html>
