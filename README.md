@@ -1,1 +1,1 @@
-# mernprojects
+# projects in MERN stack
